@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CLWXViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
+@interface CLViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 
 @end

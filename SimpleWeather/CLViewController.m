@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 mm. All rights reserved.
 //
 
-#import "CLWXViewController.h"
+#import "CLViewController.h"
 #import <LBBlurredImage/UIImageView+LBBlurredImage.h>
 
-@interface CLWXViewController ()
+@interface CLViewController ()
 
 @property (nonatomic, strong) UIImageView *backgroundImageView;
 @property (nonatomic, strong) UIImageView *blurredImageView;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation CLWXViewController
+@implementation CLViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -57,6 +57,68 @@
     self.tableView.pagingEnabled = YES;
     [self.view addSubview:self.tableView];
 
+    CGRect headerFrame = [UIScreen mainScreen].bounds;
+    CGFloat inset = 20;
+    CGFloat temperatureHeight = 110;
+    CGFloat hiloHeight = 40;
+    CGFloat iconHeight = 30;
+
+    CGRect hiloFrame = CGRectMake(inset,
+                                  headerFrame.size.height - hiloHeight,
+                                  headerFrame.size.width - (2 * inset),
+                                  hiloHeight);
+
+    CGRect temperatureFrame = CGRectMake(inset,
+                                        headerFrame.size.height - (temperatureHeight + hiloHeight),
+                                        headerFrame.size.width - (2 * inset),
+                                        temperatureHeight);
+
+    CGRect iconFrame = CGRectMake(inset,
+                                  temperatureFrame.origin.y - iconHeight,
+                                  iconHeight,
+                                  iconHeight);
+
+    CGRect conditionsFrame = iconFrame;
+    conditionsFrame.size.width = self.view.bounds.size.width - (((2 * inset) + iconHeight) + 10);
+    conditionsFrame.origin.x = iconFrame.origin.x + (iconHeight + 10);
+
+    UIView *header = [[UIView alloc] initWithFrame:headerFrame];
+    header.backgroundColor = [UIColor clearColor];
+    self.tableView.tableHeaderView = header;
+
+    UILabel *temperatureLabel = [[UILabel alloc] initWithFrame:temperatureFrame];
+    temperatureLabel.backgroundColor = [UIColor clearColor];
+    temperatureLabel.textColor = [UIColor whiteColor];
+    temperatureLabel.text = @"0º";
+    temperatureLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:120];
+    [header addSubview:temperatureLabel];
+
+    UILabel *hiloLabel = [[UILabel alloc] initWithFrame:hiloFrame];
+    hiloLabel.backgroundColor = [UIColor clearColor];
+    hiloLabel.textColor = [UIColor whiteColor];
+    hiloLabel.text = @"0º / 0º";
+    hiloLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:28];
+    [header addSubview:hiloLabel];
+
+    UILabel *cityLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, self.view.bounds.size.width, 30)];
+    cityLabel.backgroundColor = [UIColor clearColor];
+    cityLabel.textColor = [UIColor whiteColor];
+    cityLabel.text = @"Loading...";
+    cityLabel.font = [UIFont fontWithName:@"HelveticalNeue-Light" size:18];
+    cityLabel.textAlignment = NSTextAlignmentCenter;
+    [header addSubview:cityLabel];
+
+    UILabel *conditionsLabel = [[UILabel alloc] initWithFrame:conditionsFrame];
+    conditionsLabel.backgroundColor = [UIColor clearColor];
+    conditionsLabel.textColor = [UIColor whiteColor];
+    conditionsLabel.text = @"Clear";
+    conditionsLabel.font = [UIFont fontWithName:@"HelveticalNeue-Light" size:18];
+    [header addSubview:conditionsLabel];
+
+    UIImageView *iconView = [[UIImageView alloc] initWithFrame:iconFrame];
+    iconView.contentMode = UIViewContentModeScaleAspectFill;
+    iconView.backgroundColor = [UIColor clearColor];
+    [header addSubview:iconView];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
