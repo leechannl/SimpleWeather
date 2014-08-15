@@ -6,16 +6,16 @@
 //  Copyright (c) 2014 mm. All rights reserved.
 //
 
-#import "CLClient.h"
-#import "CLDailyForecast.h"
+#import "WXClient.h"
+#import "WXDailyForecast.h"
 
-@interface CLClient ()
+@interface WXClient ()
 
 @property (nonatomic, strong) NSURLSession *session;
 
 @end
 
-@implementation CLClient
+@implementation WXClient
 
 - (id)init
 {
@@ -58,13 +58,41 @@
     }];
 }
 
-- (RACSignal *)fetchCurrentConditionForLocation:(CLLocationCoordinate2D)coordinate
+- (RACSignal *)fetchCurrentConditionsForLocation:(CLLocationCoordinate2D)coordinate
 {
     NSString *urlString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&units=imperial", coordinate.latitude, coordinate.longitude];
     NSURL *url = [NSURL URLWithString:urlString];
 
     return [[self fetchJSONFromURL:url] map:^(NSDictionary *json) {
-        return [MTLJSONAdapter modelOfClass:[CLCondition class] fromJSONDictionary:json error:nil];
+        return [MTLJSONAdapter modelOfClass:[WXCondition class] fromJSONDictionary:json error:nil];
+    }];
+}
+
+- (RACSignal *)fetchHourlyForecastForLocation:(CLLocationCoordinate2D)coordinate
+{
+    NSString *urlString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast?lat=%f?&lon=%f&units=imperial&cnt=12", coordinate.latitude, coordinate.longitude];
+    NSURL *url = [NSURL URLWithString:urlString];
+
+    return [[self fetchJSONFromURL:url] map:^(NSDictionary *json) {
+        RACSequence *list = [json[@"list"] rac_sequence];
+
+        return [[list map:^(NSDictionary *item) {
+            return [MTLJSONAdapter modelOfClass:[WXDailyForecast class] fromJSONDictionary:item error:nil];
+        }] array];
+    }];
+}
+
+- (RACSignal *)fetchDailyForeCastForLocation:(CLLocationCoordinate2D)coordinate
+{
+    NSString *urlString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast/daily?lat=%f&lon=%f&units=imperial&cnt=7", coordinate.latitude, coordinate.longitude];
+    NSURL *url = [NSURL URLWithString:urlString];
+
+    return [[self fetchJSONFromURL:url] map:^(NSDictionary *json) {
+        RACSequence *list = [json[@"list"] rac_sequence];
+
+        return [[list map:^(NSDictionary *item) {
+            return [MTLJSONAdapter modelOfClass:[WXDailyForecast class] fromJSONDictionary:item error:nil];
+        }] array];
     }];
 }
 

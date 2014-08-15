@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CLAppDelegate : UIResponder <UIApplicationDelegate>
+@interface WXAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

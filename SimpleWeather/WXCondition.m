@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 mm. All rights reserved.
 //
 
-#import "CLCondition.h"
+#import "WXCondition.h"
 
-@implementation CLCondition
+@implementation WXCondition
 
 + (NSDictionary *)imageMap
 {
@@ -41,7 +41,7 @@
 
 - (NSString *)imageName
 {
-    return [CLCondition imageMap][self.icon];
+    return [WXCondition imageMap][self.icon];
 }
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey

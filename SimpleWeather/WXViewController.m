@@ -6,10 +6,11 @@
 //  Copyright (c) 2014 mm. All rights reserved.
 //
 
-#import "CLViewController.h"
+#import "WXManager.h"
+#import "WXViewController.h"
 #import <LBBlurredImage/UIImageView+LBBlurredImage.h>
 
-@interface CLViewController ()
+@interface WXViewController ()
 
 @property (nonatomic, strong) UIImageView *backgroundImageView;
 @property (nonatomic, strong) UIImageView *blurredImageView;
@@ -18,7 +19,7 @@
 
 @end
 
-@implementation CLViewController
+@implementation WXViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,6 +29,7 @@
     }
     return self;
 }
+
 
 - (void)viewDidLoad
 {
@@ -119,6 +121,18 @@
     iconView.contentMode = UIViewContentModeScaleAspectFill;
     iconView.backgroundColor = [UIColor clearColor];
     [header addSubview:iconView];
+
+    [[RACObserve([WXManager sharedManager], currentCondition)
+      deliverOn:RACScheduler.mainThreadScheduler]
+      subscribeNext:^(WXCondition *newCondition) {
+          temperatureLabel.text = [NSString stringWithFormat:@"%.0fº", newCondition.temperature.floatValue];
+          conditionsLabel.text = [newCondition.condition capitalizedString];
+          cityLabel.text = [newCondition.locationName capitalizedString];
+
+          iconView.image = [UIImage imageNamed:[newCondition imageName]];
+      }];
+
+    [[WXManager sharedManager] findCurrentLocation];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle

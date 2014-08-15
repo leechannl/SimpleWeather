@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D7834DC199D0D2A00F707D4 /* CLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7834DB199D0D2A00F707D4 /* CLViewController.m */; };
+		8D7834DC199D0D2A00F707D4 /* WXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7834DB199D0D2A00F707D4 /* WXViewController.m */; };
 		8D7834F9199D0F5800F707D4 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D7834DE199D0F5800F707D4 /* bg.png */; };
 		8D7834FA199D0F5800F707D4 /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D7834DF199D0F5800F707D4 /* bg@2x.png */; };
 		8D7834FB199D0F5800F707D4 /* weather-broken.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D7834E1199D0F5800F707D4 /* weather-broken.png */; };
@@ -34,16 +34,16 @@
 		8D783510199D0F5800F707D4 /* weather-snow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D7834F6199D0F5800F707D4 /* weather-snow@2x.png */; };
 		8D783511199D0F5800F707D4 /* weather-tstorm.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D7834F7199D0F5800F707D4 /* weather-tstorm.png */; };
 		8D783512199D0F5800F707D4 /* weather-tstorm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D7834F8199D0F5800F707D4 /* weather-tstorm@2x.png */; };
-		8D783515199D9E3300F707D4 /* CLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D783514199D9E3300F707D4 /* CLClient.m */; };
-		8D783518199D9E5300F707D4 /* CLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D783517199D9E5300F707D4 /* CLManager.m */; };
-		8D78351B199D9E7800F707D4 /* CLCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D78351A199D9E7800F707D4 /* CLCondition.m */; };
-		8D78351E199D9F2200F707D4 /* CLDailyForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D78351D199D9F2200F707D4 /* CLDailyForecast.m */; };
+		8D783515199D9E3300F707D4 /* WXClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D783514199D9E3300F707D4 /* WXClient.m */; };
+		8D783518199D9E5300F707D4 /* WXManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D783517199D9E5300F707D4 /* WXManager.m */; };
+		8D78351B199D9E7800F707D4 /* WXCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D78351A199D9E7800F707D4 /* WXCondition.m */; };
+		8D78351E199D9F2200F707D4 /* WXDailyForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D78351D199D9F2200F707D4 /* WXDailyForecast.m */; };
 		8DB1D24C199CFDC5003E4FC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB1D24B199CFDC5003E4FC7 /* Foundation.framework */; };
 		8DB1D24E199CFDC5003E4FC7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB1D24D199CFDC5003E4FC7 /* CoreGraphics.framework */; };
 		8DB1D250199CFDC5003E4FC7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB1D24F199CFDC5003E4FC7 /* UIKit.framework */; };
 		8DB1D256199CFDC5003E4FC7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8DB1D254199CFDC5003E4FC7 /* InfoPlist.strings */; };
 		8DB1D258199CFDC5003E4FC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB1D257199CFDC5003E4FC7 /* main.m */; };
-		8DB1D25C199CFDC5003E4FC7 /* CLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB1D25B199CFDC5003E4FC7 /* CLAppDelegate.m */; };
+		8DB1D25C199CFDC5003E4FC7 /* WXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB1D25B199CFDC5003E4FC7 /* WXAppDelegate.m */; };
 		8DB1D25E199CFDC5003E4FC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DB1D25D199CFDC5003E4FC7 /* Images.xcassets */; };
 		8DB1D265199CFDC5003E4FC7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB1D264199CFDC5003E4FC7 /* XCTest.framework */; };
 		8DB1D266199CFDC5003E4FC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB1D24B199CFDC5003E4FC7 /* Foundation.framework */; };
@@ -64,8 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8D7834DA199D0D2A00F707D4 /* CLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLViewController.h; sourceTree = "<group>"; };
-		8D7834DB199D0D2A00F707D4 /* CLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLViewController.m; sourceTree = "<group>"; };
+		8D7834DA199D0D2A00F707D4 /* WXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXViewController.h; sourceTree = "<group>"; };
+		8D7834DB199D0D2A00F707D4 /* WXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXViewController.m; sourceTree = "<group>"; };
 		8D7834DE199D0F5800F707D4 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		8D7834DF199D0F5800F707D4 /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@2x.png"; sourceTree = "<group>"; };
 		8D7834E1199D0F5800F707D4 /* weather-broken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weather-broken.png"; sourceTree = "<group>"; };
@@ -92,14 +92,14 @@
 		8D7834F6199D0F5800F707D4 /* weather-snow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weather-snow@2x.png"; sourceTree = "<group>"; };
 		8D7834F7199D0F5800F707D4 /* weather-tstorm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weather-tstorm.png"; sourceTree = "<group>"; };
 		8D7834F8199D0F5800F707D4 /* weather-tstorm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weather-tstorm@2x.png"; sourceTree = "<group>"; };
-		8D783513199D9E3300F707D4 /* CLClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLClient.h; sourceTree = "<group>"; };
-		8D783514199D9E3300F707D4 /* CLClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLClient.m; sourceTree = "<group>"; };
-		8D783516199D9E5300F707D4 /* CLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLManager.h; sourceTree = "<group>"; };
-		8D783517199D9E5300F707D4 /* CLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLManager.m; sourceTree = "<group>"; };
-		8D783519199D9E7800F707D4 /* CLCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLCondition.h; sourceTree = "<group>"; };
-		8D78351A199D9E7800F707D4 /* CLCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLCondition.m; sourceTree = "<group>"; };
-		8D78351C199D9F2200F707D4 /* CLDailyForecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLDailyForecast.h; sourceTree = "<group>"; };
-		8D78351D199D9F2200F707D4 /* CLDailyForecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLDailyForecast.m; sourceTree = "<group>"; };
+		8D783513199D9E3300F707D4 /* WXClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXClient.h; sourceTree = "<group>"; };
+		8D783514199D9E3300F707D4 /* WXClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXClient.m; sourceTree = "<group>"; };
+		8D783516199D9E5300F707D4 /* WXManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXManager.h; sourceTree = "<group>"; };
+		8D783517199D9E5300F707D4 /* WXManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXManager.m; sourceTree = "<group>"; };
+		8D783519199D9E7800F707D4 /* WXCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXCondition.h; sourceTree = "<group>"; };
+		8D78351A199D9E7800F707D4 /* WXCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXCondition.m; sourceTree = "<group>"; };
+		8D78351C199D9F2200F707D4 /* WXDailyForecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDailyForecast.h; sourceTree = "<group>"; };
+		8D78351D199D9F2200F707D4 /* WXDailyForecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDailyForecast.m; sourceTree = "<group>"; };
 		8DB1D248199CFDC5003E4FC7 /* SimpleWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB1D24B199CFDC5003E4FC7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8DB1D24D199CFDC5003E4FC7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -108,8 +108,8 @@
 		8DB1D255199CFDC5003E4FC7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8DB1D257199CFDC5003E4FC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8DB1D259199CFDC5003E4FC7 /* SimpleWeather-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleWeather-Prefix.pch"; sourceTree = "<group>"; };
-		8DB1D25A199CFDC5003E4FC7 /* CLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLAppDelegate.h; sourceTree = "<group>"; };
-		8DB1D25B199CFDC5003E4FC7 /* CLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLAppDelegate.m; sourceTree = "<group>"; };
+		8DB1D25A199CFDC5003E4FC7 /* WXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXAppDelegate.h; sourceTree = "<group>"; };
+		8DB1D25B199CFDC5003E4FC7 /* WXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXAppDelegate.m; sourceTree = "<group>"; };
 		8DB1D25D199CFDC5003E4FC7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8DB1D263199CFDC5003E4FC7 /* SimpleWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB1D264199CFDC5003E4FC7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -221,18 +221,18 @@
 		8DB1D251199CFDC5003E4FC7 /* SimpleWeather */ = {
 			isa = PBXGroup;
 			children = (
-				8DB1D25A199CFDC5003E4FC7 /* CLAppDelegate.h */,
-				8DB1D25B199CFDC5003E4FC7 /* CLAppDelegate.m */,
-				8D7834DA199D0D2A00F707D4 /* CLViewController.h */,
-				8D7834DB199D0D2A00F707D4 /* CLViewController.m */,
-				8D783513199D9E3300F707D4 /* CLClient.h */,
-				8D783514199D9E3300F707D4 /* CLClient.m */,
-				8D783516199D9E5300F707D4 /* CLManager.h */,
-				8D783517199D9E5300F707D4 /* CLManager.m */,
-				8D783519199D9E7800F707D4 /* CLCondition.h */,
-				8D78351A199D9E7800F707D4 /* CLCondition.m */,
-				8D78351C199D9F2200F707D4 /* CLDailyForecast.h */,
-				8D78351D199D9F2200F707D4 /* CLDailyForecast.m */,
+				8DB1D25A199CFDC5003E4FC7 /* WXAppDelegate.h */,
+				8DB1D25B199CFDC5003E4FC7 /* WXAppDelegate.m */,
+				8D7834DA199D0D2A00F707D4 /* WXViewController.h */,
+				8D7834DB199D0D2A00F707D4 /* WXViewController.m */,
+				8D783513199D9E3300F707D4 /* WXClient.h */,
+				8D783514199D9E3300F707D4 /* WXClient.m */,
+				8D783516199D9E5300F707D4 /* WXManager.h */,
+				8D783517199D9E5300F707D4 /* WXManager.m */,
+				8D783519199D9E7800F707D4 /* WXCondition.h */,
+				8D78351A199D9E7800F707D4 /* WXCondition.m */,
+				8D78351C199D9F2200F707D4 /* WXDailyForecast.h */,
+				8D78351D199D9F2200F707D4 /* WXDailyForecast.m */,
 				8DB1D25D199CFDC5003E4FC7 /* Images.xcassets */,
 				8D7834DD199D0F5800F707D4 /* Images */,
 				8DB1D252199CFDC5003E4FC7 /* Supporting Files */,
@@ -426,13 +426,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D783515199D9E3300F707D4 /* CLClient.m in Sources */,
+				8D783515199D9E3300F707D4 /* WXClient.m in Sources */,
 				8DB1D258199CFDC5003E4FC7 /* main.m in Sources */,
-				8D78351B199D9E7800F707D4 /* CLCondition.m in Sources */,
-				8D78351E199D9F2200F707D4 /* CLDailyForecast.m in Sources */,
-				8D783518199D9E5300F707D4 /* CLManager.m in Sources */,
-				8D7834DC199D0D2A00F707D4 /* CLViewController.m in Sources */,
-				8DB1D25C199CFDC5003E4FC7 /* CLAppDelegate.m in Sources */,
+				8D78351B199D9E7800F707D4 /* WXCondition.m in Sources */,
+				8D78351E199D9F2200F707D4 /* WXDailyForecast.m in Sources */,
+				8D783518199D9E5300F707D4 /* WXManager.m in Sources */,
+				8D7834DC199D0D2A00F707D4 /* WXViewController.m in Sources */,
+				8DB1D25C199CFDC5003E4FC7 /* WXAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 mm. All rights reserved.
 //
 
-#import "CLDailyForecast.h"
+#import "WXDailyForecast.h"
 
-@implementation CLDailyForecast
+@implementation WXDailyForecast
 
 + (NSDictionary *)JSONKeyPathByPropertyKey
 {

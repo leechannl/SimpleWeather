@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 mm. All rights reserved.
 //
 
-#import "CLCondition.h"
+#import "WXCondition.h"
 
-@interface CLDailyForecast : CLCondition
+@interface WXDailyForecast : WXCondition
 
 @end

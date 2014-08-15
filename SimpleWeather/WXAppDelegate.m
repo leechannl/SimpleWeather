@@ -6,17 +6,17 @@
 //  Copyright (c) 2014 mm. All rights reserved.
 //
 
-#import "CLAppDelegate.h"
-#import "CLViewController.h"
+#import "WXAppDelegate.h"
+#import "WXViewController.h"
 #import <TSMessage.h>
 
-@implementation CLAppDelegate
+@implementation WXAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.rootViewController = [[CLViewController alloc] init];
+    self.window.rootViewController = [[WXViewController alloc] init];
     self.window.backgroundColor = [UIColor whiteColor];
 
     [self.window makeKeyAndVisible];

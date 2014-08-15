@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-@import CoreLocation
+@import CoreLocation;
 #import <ReactiveCocoa/ReactiveCocoa/ReactiveCocoa.h>
 
-@interface CLClient : NSObject
+@interface WXClient : NSObject
 
 - (RACSignal *)fetchJSONFromURL:(NSURL *)url;
 - (RACSignal *)fetchCurrentConditionsForLocation:(CLLocationCoordinate2D)coordinate;
